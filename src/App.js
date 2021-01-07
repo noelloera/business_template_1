@@ -1,8 +1,8 @@
 //import logo from "./logo.svg";
 import "./App.css";
 //Bootstrap Elements
-import { Container } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Carousel } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
 //Components
 import Navigation from "./components/Navigation";
 
@@ -10,9 +10,11 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-      <Container>
-        <p>some content displayed here</p>
-      </Container>
+      <Carousel>
+        <Carousel.Item>
+
+        </Carousel.Item>
+      </Carousel>
     </div>
   );
 }

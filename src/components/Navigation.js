@@ -1,20 +1,26 @@
 import { Navbar, Nav } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const Navigation = (props) => {
   return (
-    <Navbar bg="dark" variant="dark" className="d-flex ">
-      <div className="mr-auto p-2">
-        <Navbar.Brand href="#">Business Name</Navbar.Brand>
-      </div>
-      <div className="p-2">
-        <Nav>
+    <>
+      <style type="text/css">
+        {`
+          .navbar-dark-tratra{
+            background-color: purple;
+        }
+        `}
+      </style>
+      <Navbar bg="dark" variant="tratra" className="d-flex">
+        <Navbar.Brand className="mr-auto p-2" href="#">
+          Business Name
+        </Navbar.Brand>
+        <Nav className="p-2">
           <Nav.Link>Home</Nav.Link>
           <Nav.Link>About Us</Nav.Link>
           <Nav.Link>Pricing</Nav.Link>
         </Nav>
-      </div>
-    </Navbar>
+      </Navbar>
+    </>
   );
 };
 
