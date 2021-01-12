@@ -2,7 +2,6 @@ import { Navbar, Nav } from "react-bootstrap";
 
 const Navigation = (props) => {
   return (
-    <>
       <Navbar bg="dark" variant="dark" className="d-flex">
         <Navbar.Brand className="mr-auto p-2" href="#">
           Business Name
@@ -13,7 +12,6 @@ const Navigation = (props) => {
           <Nav.Link>Pricing</Nav.Link>
         </Nav>
       </Navbar>
-    </>
   );
 };
 
