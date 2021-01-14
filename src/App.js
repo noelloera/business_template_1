@@ -1,11 +1,11 @@
 //import logo from "./logo.svg";
 import "./App.css";
 //Bootstrap Elements
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button, Glyphicon } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 //Components
 import Navigation from "./components/Navigation";
-import CarouselComp from "./components/CarouselComp"
+import CarouselComp from "./components/CarouselComp";
 
 function App() {
   return (
