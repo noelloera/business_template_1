@@ -1,17 +1,21 @@
-import { Navbar, Nav } from "react-bootstrap";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
+import Button from "@material-ui/core/Button";
+import { Typography } from "@material-ui/core";
 
+//Add flex gridding 
 const Navigation = (props) => {
   return (
-      <Navbar bg="dark" variant="dark" className="d-flex">
-        <Navbar.Brand className="mr-auto p-2" href="#">
-          Business Name
-        </Navbar.Brand>
-        <Nav className="p-2">
-          <Nav.Link>Home</Nav.Link>
-          <Nav.Link>About Us</Nav.Link>
-          <Nav.Link>Pricing</Nav.Link>
-        </Nav>
-      </Navbar>
+    <AppBar>
+      <Toolbar>
+        <IconButton>
+          <MenuIcon />
+        </IconButton>
+        <Typography variant="h5">BUSINESS NAME</Typography>
+      </Toolbar>
+    </AppBar>
   );
 };
 
