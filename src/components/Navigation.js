@@ -14,6 +14,7 @@ const Navigation = (props) => {
           <MenuIcon />
         </IconButton>
         <Typography variant="h5">BUSINESS NAME</Typography>
+        <Button>user</Button>
       </Toolbar>
     </AppBar>
   );
