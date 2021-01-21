@@ -5,25 +5,31 @@ import { makeStyles } from "@material-ui/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import Button from "@material-ui/core/Button";
 import { Typography, Grid } from "@material-ui/core";
+import image from "../assets/audiovideoinstalllogo.png";
 
 const style = makeStyles(() => ({
   typographyStyles: {
     flex: 1,
+  },
+  navStyle: {
+    backgroundColor: "white",
+  },
+  logo: {
+    width: "100px",
   },
 }));
 //Add flex gridding
 const Navigation = (props) => {
   const classes = style();
   return (
-    <AppBar position="static">
+    <AppBar className={classes.navStyle} position="static">
       <Toolbar>
         <IconButton>
           <MenuIcon />
         </IconButton>
-        <Typography className={classes.typographyStyles} variant="h5">
-          BUSINESS NAME
-        </Typography>
-        <Button>user</Button>
+        <a href="#">
+          <img className={classes.logo} src={image} />
+        </a>
       </Toolbar>
     </AppBar>
   );
