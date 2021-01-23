@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import Button from "@material-ui/core/Button";
 import { Typography, Grid } from "@material-ui/core";
-import image from "../assets/audiovideoinstalllogo.png";
+import image from "../assets/audiovideologo.png";
 
 const style = makeStyles(() => ({
   typographyStyles: {
@@ -15,7 +15,7 @@ const style = makeStyles(() => ({
     backgroundColor: "white",
   },
   logo: {
-    width: "100px",
+    width: "150px",
   },
 }));
 //Add flex gridding
