@@ -15,7 +15,7 @@ const style = makeStyles(() => ({
     backgroundColor: "white",
   },
   logo: {
-    width: "150px",
+    width: "155px",
   },
 }));
 //Add flex gridding
@@ -27,7 +27,7 @@ const Navigation = (props) => {
         <IconButton>
           <MenuIcon />
         </IconButton>
-        <a href="#">
+        <a href="/">
           <img className={classes.logo} src={image} />
         </a>
       </Toolbar>
