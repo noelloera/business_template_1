@@ -24,7 +24,7 @@ const Content = () => {
               Surround Sound system. El Paso's highest rated home theater
               installation company.
             </Typography>
-            <Button variant="contained" color="primary">
+            <Button variant="outlined" color="primary">
               Schedule Now
             </Button>
           </Grid>
