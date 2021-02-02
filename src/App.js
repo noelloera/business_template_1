@@ -1,7 +1,6 @@
 //import logo from "./logo.svg";
 import "./App.css";
 //MaterialUI
-import { Button, Typography, Grid } from "@material-ui/core";
 //Bootstrap
 import "bootstrap/dist/css/bootstrap.css";
 //Components
