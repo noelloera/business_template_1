@@ -15,8 +15,6 @@ code {
 /* MaterialUI root overrides*/
 .MuiButton-root {
   height: 3.7rem;
-  width: 10rem;
-  font-size: 6rem;
 }
 
 @media only screen and (max-width: 960px) {

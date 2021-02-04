@@ -32,6 +32,10 @@ const theme = createMuiTheme({
       fontFamily: "IBM plex sans",
       fontSize: "1.5rem",
     },
+    button: {
+      fontFamily: "IBM plex sans",
+      fontSize: "1rem"
+    },
   },
 });
 export default theme;
