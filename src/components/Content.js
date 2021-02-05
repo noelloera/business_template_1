@@ -2,6 +2,7 @@ import { Typography, Grid, Button } from "@material-ui/core";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import theme from "../assets/theme";
+
 const useStyles = makeStyles({
   content: {
     paddingLeft: "0",

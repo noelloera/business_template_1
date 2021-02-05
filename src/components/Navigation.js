@@ -3,32 +3,69 @@ import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import { makeStyles } from "@material-ui/styles";
 import MenuIcon from "@material-ui/icons/Menu";
-import image from "../assets/audiovideologo.png";
+import image from "../assets/jmaudiovideo.png";
+import theme from "../assets/theme";
+//MaterialUI Icons
+import Facebook from "@material-ui/icons/Facebook";
+import Email from "@material-ui/icons/Email";
+//Fonts
+import "typeface-anton";
+import "typeface-ibm-plex-sans";
 
-const style = makeStyles(() => ({
+const useStyles = makeStyles(() => ({
   typographyStyles: {
     flex: 1,
   },
   navStyle: {
     backgroundColor: "white",
+    
+  },
+  subBar: {
+    position: "relative",
+    fontFamily: "IBM plex sans",
+    color: "white",
+    backgroundColor: "gray",
+  },
+  subBarContent: {
+    color: "white",
+    display: "flex",
+    paddingTop: "0.5rem",
+    justifyContent: "space-around",
+  },
+  toolbar: {
+    position: "relative",
+    padding: "0.6rem",
   },
   logo: {
-    width: "155px",
+    width: "200px",
   },
 }));
 //Add flex gridding
 const Navigation = (props) => {
-  const classes = style();
+  const classes = useStyles();
   return (
     <AppBar className={classes.navStyle} position="static">
-      <Toolbar>
+      <Toolbar className={classes.toolbar}>
         <IconButton>
           <MenuIcon />
         </IconButton>
         <a href="/">
           <img alt="mounted tv" className={classes.logo} src={image} />
         </a>
+        <IconButton href="https://www.facebook.com/profile.php?id=100011054640194">
+          <Facebook />
+        </IconButton>
+        <IconButton href="mailto:loera.noel@gmail.com?subject=Service Requested">
+          <Email />
+        </IconButton>
+        <Facebook />
       </Toolbar>
+      <div className={classes.subBar}>
+        <a className={classes.subBarContent} href="tel:9158881203">
+          <h6>SCHEDULE FREE QUOTE:</h6>
+          <h6>(915)888-1203</h6>
+        </a>
+      </div>
     </AppBar>
   );
 };

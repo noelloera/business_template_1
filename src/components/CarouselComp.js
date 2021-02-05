@@ -1,40 +1,19 @@
 import { Carousel } from "react-bootstrap";
+import img1 from "../assets/pic01.jpg";
+import img2 from "../assets/pic02.jpg";
+import img3 from "../assets/pic03.jpg";
 
 const CarouselComp = () => {
   return (
     <Carousel>
       <Carousel.Item interval={3500}>
-        <img
-          className="d-block w-100"
-          src="https://www.w3schools.com/bootstrap/la.jpg"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>First slide inner text</p>
-        </Carousel.Caption>
+        <img className="d-block w-100" src={img1} alt="First slide" />
       </Carousel.Item>
       <Carousel.Item interval={3500}>
-        <img
-          className="d-block w-100"
-          src="https://www.w3schools.com/bootstrap/chicago.jpg"
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Second slide inner text</p>
-        </Carousel.Caption>
+        <img className="d-block w-100" src={img2} alt="Third slide" />
       </Carousel.Item>
       <Carousel.Item intreval={3500}>
-        <img
-          className="d-block w-100"
-          src="https://www.w3schools.com/bootstrap/ny.jpg"
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Third slide inner text</p>
-        </Carousel.Caption>
+        <img className="d-block w-100" src={img3} alt="Third slide" />
       </Carousel.Item>
     </Carousel>
   );
