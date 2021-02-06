@@ -18,7 +18,6 @@ const useStyles = makeStyles(() => ({
   },
   navStyle: {
     backgroundColor: "white",
-    
   },
   subBar: {
     position: "relative",
@@ -33,6 +32,8 @@ const useStyles = makeStyles(() => ({
     justifyContent: "space-around",
   },
   toolbar: {
+    display: "flex",
+    justifyContent: "space-between",
     position: "relative",
     padding: "0.6rem",
   },
@@ -46,19 +47,23 @@ const Navigation = (props) => {
   return (
     <AppBar className={classes.navStyle} position="static">
       <Toolbar className={classes.toolbar}>
-        <IconButton>
-          <MenuIcon />
-        </IconButton>
-        <a href="/">
-          <img alt="mounted tv" className={classes.logo} src={image} />
-        </a>
-        <IconButton href="https://www.facebook.com/profile.php?id=100011054640194">
+        <div>
+          <IconButton>
+            <MenuIcon />
+          </IconButton>
+          <a href="/">
+            <img alt="mounted tv" className={classes.logo} src={image} />
+          </a>
+        </div>
+        <div>
+          <IconButton href="https://www.facebook.com/profile.php?id=100011054640194">
+            <Facebook />
+          </IconButton>
+          <IconButton href="mailto:loera.noel@gmail.com?subject=Service Requested">
+            <Email />
+          </IconButton>
           <Facebook />
-        </IconButton>
-        <IconButton href="mailto:loera.noel@gmail.com?subject=Service Requested">
-          <Email />
-        </IconButton>
-        <Facebook />
+        </div>
       </Toolbar>
       <div className={classes.subBar}>
         <a className={classes.subBarContent} href="tel:9158881203">
