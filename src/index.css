@@ -16,6 +16,9 @@ code {
 .MuiButton-root {
   height: 3.7rem;
 }
+.MuiLink-root {
+  text-decoration: "none";
+}
 
 @media only screen and (max-width: 960px) {
   .MuiButton-root {

@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     },
   },
   divStyling: {
-    marginTop: "2rem",
+    marginTop: "0.5rem",
     display: "flex",
   },
   buttonStyling: {
@@ -25,17 +25,17 @@ const Content = () => {
     <div>
       <Grid item container className={classes.content}>
         <Box m={3}>
-          <Grid alignItems="flex-start" item md={9} xs={12}>
+          <Grid alignItems="flex-start" item md={8} xs={12}>
             <Typography gutterBottom align="left" variant="body1">
               Video & Audio Mounting Service
             </Typography>
             <Typography align="left" variant="h4">
-              TV MOUNTING
+              TV Mounting
             </Typography>
             <Typography color="primary" align="left" variant="h4">
-              SERVICE
+              Service
             </Typography>
-            <Typography gutterBottom align="left" variant="body2">
+            <Typography align="left" variant="body2">
               Modernize your home today with a professionally installed TV or
               Surround Sound system. El Paso's highest rated home theater
               installation company.
@@ -45,6 +45,9 @@ const Content = () => {
                 className={classes.buttonStyling}
                 variant="contained"
                 color="primary"
+                onClick={(e) => {
+                  window.location.href = "tel://9158881203";
+                }}
               >
                 Schedule Now
               </Button>

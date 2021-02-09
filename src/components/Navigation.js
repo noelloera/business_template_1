@@ -2,7 +2,6 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import { makeStyles } from "@material-ui/styles";
-import MenuIcon from "@material-ui/icons/Menu";
 import image from "../assets/jmaudiovideo.png";
 import theme from "../assets/theme";
 //MaterialUI Icons
@@ -11,6 +10,7 @@ import Email from "@material-ui/icons/Email";
 //Fonts
 import "typeface-anton";
 import "typeface-ibm-plex-sans";
+import SwipeableTemporaryDrawer from "./Drawer";
 
 const useStyles = makeStyles(() => ({
   typographyStyles: {
@@ -49,7 +49,7 @@ const Navigation = (props) => {
       <Toolbar className={classes.toolbar}>
         <div>
           <IconButton>
-            <MenuIcon />
+            <SwipeableTemporaryDrawer />
           </IconButton>
           <a href="/">
             <img alt="mounted tv" className={classes.logo} src={image} />

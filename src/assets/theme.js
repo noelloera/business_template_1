@@ -1,5 +1,4 @@
 import { createMuiTheme } from "@material-ui/core/styles";
-import { green } from "@material-ui/core/colors";
 import "typeface-anton";
 import "typeface-ibm-plex-sans";
 const defaultTheme = createMuiTheme();
@@ -7,7 +6,7 @@ const defaultTheme = createMuiTheme();
 const theme = createMuiTheme({
   palette: {
     primary: { main: "#5298fa", contrastText: "#fff" },
-    secondary: green,
+    secondary: { main: "#fff", contrastText: "#fff" },
   },
   status: {
     danger: "orange",
@@ -16,10 +15,15 @@ const theme = createMuiTheme({
   typography: {
     h4: {
       fontFamily: "Anton",
-      fontSize: "3.6rem",
+      fontSize: "3rem",
       [defaultTheme.breakpoints.up("md")]: {
         fontSize: "6rem",
       },
+    },
+    h6: {
+      fontFamily: "IBM plex sans",
+      color: "white",
+      fontSize: "1.5rem",
     },
     body1: {
       fontFamily: "Anton",
@@ -30,11 +34,11 @@ const theme = createMuiTheme({
     },
     body2: {
       fontFamily: "IBM plex sans",
-      fontSize: "1.5rem",
+      fontSize: "1.1rem",
     },
     button: {
       fontFamily: "IBM plex sans",
-      fontSize: "1rem"
+      fontSize: "1rem",
     },
   },
 });
