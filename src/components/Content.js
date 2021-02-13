@@ -13,6 +13,7 @@ const useStyles = makeStyles({
   divStyling: {
     marginTop: "0.5rem",
     display: "flex",
+    paddingBottom: "6rem",
   },
   buttonStyling: {
     justifyContent: "flex-start",
