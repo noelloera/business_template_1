@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   },
   divStyling: {
     margin: "auto",
-    backgroundColor: "lightgray",
+    backgroundColor: "gray",
   },
   buttonStyling: {
     justifyContent: "flex-end",

@@ -5,15 +5,13 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 //Components
 import Navigation from "./components/Navigation";
-import CarouselComp from "./components/CarouselComp";
-import Content from "./components/Content";
+import Header from "./components/Header";
 import Services from "./components/Services";
 function App() {
   return (
     <div className="App">
       <Navigation />
-      <CarouselComp />
-      <Content />
+      <Header />
       <Services />
     </div>
   );

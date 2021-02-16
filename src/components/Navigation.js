@@ -11,6 +11,7 @@ import Email from "@material-ui/icons/Email";
 import "typeface-anton";
 import "typeface-ibm-plex-sans";
 import SwipeableTemporaryDrawer from "./Drawer";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
   typographyStyles: {
@@ -20,25 +21,37 @@ const useStyles = makeStyles(() => ({
     backgroundColor: "white",
   },
   subBar: {
+    height: "2rem",
+    paddingLeft: "3rem",
+    paddingRight: "3rem",
+    [theme.breakpoints.up("md")]: {
+      height: "4rem",
+      paddingLeft: "5rem",
+      paddingRight: "5rem",
+    },
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
     position: "relative",
     fontFamily: "IBM plex sans",
     color: "white",
     backgroundColor: "gray",
-  },
-  subBarContent: {
-    color: "white",
-    display: "flex",
-    paddingTop: "0.5rem",
-    justifyContent: "space-around",
+    fontSize: "10rem",
   },
   toolbar: {
     display: "flex",
     justifyContent: "space-between",
     position: "relative",
     padding: "0.6rem",
+    [theme.breakpoints.up("md")]: {
+      padding: "0.6rem 2rem",
+    },
   },
   logo: {
     width: "200px",
+    [theme.breakpoints.up("md")]: {
+      width: "250px",
+    },
   },
 }));
 //Add flex gridding
@@ -66,10 +79,8 @@ const Navigation = (props) => {
         </div>
       </Toolbar>
       <div className={classes.subBar}>
-        <a className={classes.subBarContent} href="tel:9158881203">
-          <h6>SCHEDULE FREE QUOTE:</h6>
-          <h6>(915)888-1203</h6>
-        </a>
+        <Typography variant="body2">SCHEDULE FREE QUOTE:</Typography>
+        <Typography variant="body2">(915)888-1203</Typography>
       </div>
     </AppBar>
   );

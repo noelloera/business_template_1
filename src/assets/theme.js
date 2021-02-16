@@ -29,16 +29,22 @@ const theme = createMuiTheme({
       fontFamily: "Anton",
       fontSize: "1.35rem",
       [defaultTheme.breakpoints.up("md")]: {
-        fontSize: "2.3rem",
+        fontSize: "2rem",
       },
     },
     body2: {
       fontFamily: "IBM plex sans",
       fontSize: "1.1rem",
+      [defaultTheme.breakpoints.up("md")]: {
+        fontSize: "1.5rem",
+      },
     },
     button: {
       fontFamily: "IBM plex sans",
       fontSize: "1rem",
+      [defaultTheme.breakpoints.up("md")]: {
+        fontSize: "1.3rem",
+      },
     },
   },
 });
