@@ -6,15 +6,23 @@ import CarouselComp from "./CarouselComp";
 
 const useStyles = makeStyles({
   content: {
-    paddingLeft: "0",
+    marginLeft: "0",
     [theme.breakpoints.up("md")]: {
-      paddingLeft: "4rem",
+      marginLeft: "3rem",
+      paddingBottom: "10rem",
+    },
+    paddingBottom: "2rem",
+  },
+  items: {
+    paddingRight: "0",
+    [theme.breakpoints.up("md")]: {
+      paddingRight: "3rem",
     },
   },
   divStyling: {
     marginTop: "0.5rem",
     display: "flex",
-    paddingBottom: "6rem",
+    paddingBottom: "4rem",
   },
   buttonStyling: {
     justifyContent: "flex-start",
@@ -30,7 +38,7 @@ const Header = () => {
       alignItems="center"
       direction="row-reverse"
     >
-      <Grid className={classes.items} item md={7} xs={12}>
+      <Grid item className={classes.items} md={7} xs={12}>
         <CarouselComp />
       </Grid>
       <Grid item alignItems="flex-start" md={5} xs={12}>

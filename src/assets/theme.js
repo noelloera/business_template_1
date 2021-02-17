@@ -6,18 +6,14 @@ const defaultTheme = createMuiTheme();
 const theme = createMuiTheme({
   palette: {
     primary: { main: "#5298fa", contrastText: "#fff" },
-    secondary: { main: "#fff", contrastText: "#fff" },
+    secondary: { main: "#000", contrastText: "#fff" },
   },
-  status: {
-    danger: "orange",
-  },
-
   typography: {
     h4: {
       fontFamily: "Anton",
       fontSize: "3rem",
       [defaultTheme.breakpoints.up("md")]: {
-        fontSize: "6rem",
+        fontSize: "5rem",
       },
     },
     h6: {
@@ -36,7 +32,7 @@ const theme = createMuiTheme({
       fontFamily: "IBM plex sans",
       fontSize: "1.1rem",
       [defaultTheme.breakpoints.up("md")]: {
-        fontSize: "1.5rem",
+        fontSize: "1.25rem",
       },
     },
     button: {

@@ -11,40 +11,32 @@ import Email from "@material-ui/icons/Email";
 import "typeface-anton";
 import "typeface-ibm-plex-sans";
 import SwipeableTemporaryDrawer from "./Drawer";
-import { Typography } from "@material-ui/core";
+import { Typography, Hidden } from "@material-ui/core";
+import { Link } from "react-scroll";
 
 const useStyles = makeStyles(() => ({
-  typographyStyles: {
-    flex: 1,
-  },
   navStyle: {
     backgroundColor: "white",
-  },
-  subBar: {
-    height: "2rem",
-    paddingLeft: "3rem",
-    paddingRight: "3rem",
-    [theme.breakpoints.up("md")]: {
-      height: "4rem",
-      paddingLeft: "5rem",
-      paddingRight: "5rem",
-    },
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    position: "relative",
-    fontFamily: "IBM plex sans",
-    color: "white",
-    backgroundColor: "gray",
-    fontSize: "10rem",
   },
   toolbar: {
     display: "flex",
     justifyContent: "space-between",
-    position: "relative",
     padding: "0.6rem",
     [theme.breakpoints.up("md")]: {
-      padding: "0.6rem 2rem",
+      padding: "0.6rem 2rem 0.6rem 3.5rem",
+    },
+  },
+  subBar: {
+    height: "2rem",
+    display: "flex",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    fontFamily: "IBM plex sans",
+    color: "white",
+    backgroundColor: "black",
+    marginBottom: "1.5rem",
+    [theme.breakpoints.up("md")]: {
+      height: "3rem",
     },
   },
   logo: {
@@ -53,22 +45,51 @@ const useStyles = makeStyles(() => ({
       width: "250px",
     },
   },
+  rightSide: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  links: {
+    display: "flex",
+  },
+  link: {
+    marginRight: "1rem",
+    cursor: "pointer",
+  },
 }));
-//Add flex gridding
 const Navigation = (props) => {
   const classes = useStyles();
   return (
     <AppBar className={classes.navStyle} position="static">
       <Toolbar className={classes.toolbar}>
         <div>
-          <IconButton>
-            <SwipeableTemporaryDrawer />
-          </IconButton>
+          <Hidden mdUp>
+            <IconButton>
+              <SwipeableTemporaryDrawer />
+            </IconButton>
+          </Hidden>
           <a href="/">
             <img alt="mounted tv" className={classes.logo} src={image} />
           </a>
         </div>
-        <div>
+        <div className={classes.rightSide}>
+          <Hidden smDown>
+            <div className={classes.links}>
+              {["HOME", "SERVICES", "CONTACT", "GALLERY"].map((text) => (
+                <Link to={text} smooth>
+                  <Typography
+                    className={classes.link}
+                    color="secondary"
+                    variant="body2"
+                  >
+                    {text}
+                  </Typography>
+                </Link>
+              ))}
+            </div>
+          </Hidden>
           <IconButton href="https://www.facebook.com/profile.php?id=100011054640194">
             <Facebook />
           </IconButton>

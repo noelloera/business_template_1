@@ -9,7 +9,6 @@ import theme from "../assets/theme";
 const useStyles = makeStyles({
   items: {
     width: "100%",
-    height: "400px",
     [theme.breakpoints.up("md")]: {
       height: "800px",
     },
@@ -19,7 +18,7 @@ const useStyles = makeStyles({
     [theme.breakpoints.up("md")]: {
       position: "relative",
       margin: "0 auto",
-      maxWidth: "768px",
+      maxWidth: "850px",
       width: "100%",
       height: "100%",
     },

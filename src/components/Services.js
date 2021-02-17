@@ -1,77 +1,135 @@
+import image4 from "../assets/pic04.jpg";
+import image5 from "../assets/pic05.jpg";
 import { Typography, Grid, Button } from "@material-ui/core";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import theme from "../assets/theme";
+import CarouselComp from "./CarouselComp";
 import "typeface-ibm-plex-sans";
-import image4 from "../assets/pic04.jpg";
-import image5 from "../assets/pic05.jpg";
-
 const useStyles = makeStyles({
   content: {
-    paddingLeft: "0",
+    padding: "0",
+    borderBottom: "1px solid lightgray",
     [theme.breakpoints.up("md")]: {
-      paddingLeft: "4rem",
+      padding: "10rem 2rem",
     },
   },
-  divStyling: {
-    margin: "auto",
-    backgroundColor: "gray",
-  },
-  buttonStyling: {
-    justifyContent: "flex-end",
-  },
-  imageStyling: {
+  image: {
     width: "100%",
+    [theme.breakpoints.up("md")]: {
+      position: "relative",
+      width: "100%",
+      height: "100%",
+    },
+  },
+  services: {
+    display: "flex",
+    height: "2rem",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    fontFamily: "IBM plex sans",
+    color: "white",
+    backgroundColor: "black",
+    marginBottom: "1.5rem",
+    [theme.breakpoints.up("md")]: {
+      height: "3rem",
+    },
   },
 });
 
-const Services = () => {
+const Header = () => {
   const classes = useStyles();
   return (
-    <div id="SERVICES">
-      <div className={classes.divStyling}>
-        <Typography className={classes.divider} variant="h6">
-          SERVICES
-        </Typography>
-      </div>
-      <Grid item container className={classes.content}>
-        <img className={classes.imageStyling} src={image4}></img>
-
-        <Box m={3}>
-          <Grid alignItems="flex-end" item md={8} xs={12}>
-            <Typography align="right" variant="h4">
+    <div>
+      <Typography className={classes.services} variant="body2" id="SERVICES">
+        SERVICES
+      </Typography>
+      <Grid
+        container
+        className={classes.content}
+        alignItems="center"
+        direction="row"
+      >
+        <Grid item className={classes.items} md={7} xs={12}>
+          <img className={classes.image} src={image4}></img>
+        </Grid>
+        <Grid item alignItems="flex-end" md={5} xs={12}>
+          <Box m={3}>
+            <Typography gutterBottom align="right" variant="body1">
               Professional
             </Typography>
             <Typography color="primary" align="right" variant="h4">
-              TV Mounting
+              Television
             </Typography>
-            <Typography gutterBottom align="right" variant="body2">
-              Providing excpetional customer service with residential and
-              commercial installations for the best Home Theatre expirience.{" "}
+            <Typography align="right" variant="h4">
+              Mounting
             </Typography>
-          </Grid>
-        </Box>
+            <Typography align="right" variant="body2">
+              Modernize your home today with a professionally installed TV or
+              Surround Sound system. El Paso's highest rated home theater
+              installation company.
+            </Typography>
+          </Box>
+        </Grid>
       </Grid>
-      <Grid item container className={classes.content}>
-        <img className={classes.imageStyling} src={image5}></img>
-
-        <Box m={3}>
-          <Grid alignItems="flex-start" item md={8} xs={12}>
-            <Typography align="left" variant="h4">
+      <Grid
+        container
+        className={classes.content}
+        alignItems="center"
+        direction="row-reverse"
+      >
+        <Grid item className={classes.items} md={7} xs={12}>
+          <img className={classes.image} src={image5}></img>
+        </Grid>
+        <Grid item alignItems="flex-end" md={5} xs={12}>
+          <Box m={3}>
+            <Typography gutterBottom align="left" variant="body1">
               Expert
             </Typography>
             <Typography color="primary" align="left" variant="h4">
-              Home Audio Setup
+              Home Audio
             </Typography>
-            <Typography gutterBottom align="left" variant="body2">
-              Providing excpetional customer service with residential and
-              commercial installations for the best Home Theatre expirience.{" "}
+            <Typography align="left" variant="h4">
+              Setup
             </Typography>
-          </Grid>
-        </Box>
+            <Typography align="left" variant="body2">
+              Modernize your home today with a professionally installed TV or
+              Surround Sound system. El Paso's highest rated home theater
+              installation company.
+            </Typography>
+          </Box>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        className={classes.content}
+        alignItems="center"
+        direction="row"
+      >
+        <Grid item className={classes.items} md={7} xs={12}>
+          <img className={classes.image} src={image5}></img>
+        </Grid>
+        <Grid item alignItems="flex-start" md={5} xs={12}>
+          <Box m={3}>
+            <Typography gutterBottom align="right" variant="body1">
+              Themed
+            </Typography>
+            <Typography color="primary" align="right" variant="h4">
+              Video Game
+            </Typography>
+            <Typography align="right" variant="h4">
+              Center
+            </Typography>
+            <Typography align="right" variant="body2">
+              Modernize your home today with a professionally installed TV or
+              Surround Sound system. El Paso's highest rated home theater
+              installation company.
+            </Typography>
+          </Box>
+        </Grid>
       </Grid>
     </div>
   );
 };
 
-export default Services;
+export default Header;

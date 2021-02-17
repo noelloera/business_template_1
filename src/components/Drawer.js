@@ -1,34 +1,44 @@
 import React from "react";
-import clsx from "clsx";
+
 import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import MenuIcon from "@material-ui/icons/Menu";
 import image from "../assets/jmaudiovideo.png";
 import "typeface-anton";
 import "typeface-ibm-plex-sans";
 import { Link } from "react-scroll";
-import Services from "./Services";
 const useStyles = makeStyles({
-  list: {
-    width: 250,
+  drawer: {
+    width: "250px",
   },
-  fullList: {
-    width: "auto",
+  list: {
+    display: "flex",
+    flexDirection: "column",
+  },
+  logoDiv: {
+    display: "flex",
+    justifyContent: "center",
+    borderBottom: "1px solid gray",
   },
   logo: {
-    width: "100%",
+    height: "3rem",
+    width: "11rem",
+    margin: "0.5rem",
   },
-  listItems: {
+  links: {
+    display: "flex",
+    justifyContent: "center",
+    borderBottom: "1px solid lightgray",
+    cursor: "pointer",
+  },
+  listItem: {
     color: "black",
-    fontWeight: "bold",
-    fontSize: "1.3rem",
-    margin: "auto",
+    fontSize: "1.1rem",
   },
   phone: {
-    marginTop: "2.5rem",
+    marginTop: "2rem",
     fontWeight: "bold",
     textAlign: "center",
   },
@@ -37,12 +47,8 @@ const useStyles = makeStyles({
 export default function SwipeableTemporaryDrawer() {
   const classes = useStyles();
   const [state, setState] = React.useState({
-    top: false,
     left: false,
-    bottom: false,
-    right: false,
   });
-
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event &&
@@ -51,68 +57,48 @@ export default function SwipeableTemporaryDrawer() {
     ) {
       return;
     }
-
     setState({ ...state, [anchor]: open });
   };
-
   const handleClose = () => {
     setState({ open: false });
   };
   const list = (anchor) => (
     <div
-      className={clsx(classes.list, {
-        [classes.fullList]: anchor === "top" || anchor === "bottom",
-      })}
+      className={classes.drawer}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <a href="/">
+      <div className={classes.logoDiv}>
         <img alt="mounted tv" className={classes.logo} src={image} />
-      </a>
-      <Divider />
-      <List>
-        {["HOME", "SERVICES"].map((text, index) => (
-          <ListItem button key={text}>
-            <Link
-              to={text}
-              smooth="true"
-              style={{ textDecoration: "none" }}
-              className={classes.listItems}
-              primary={text}
-              onClick={(e) => {
-                handleClose();
-              }}
-            >
-              {text}
-            </Link>
-          </ListItem>
+      </div>
+      <List className={classes.list}>
+        {["HOME", "SERVICES", "CONTACT", "GALLERY"].map((text) => (
+          <Link
+            to={text}
+            style={{ textDecoration: "none" }}
+            smooth
+            className={classes.links}
+            onClick={(e) => {
+              handleClose();
+            }}
+          >
+            <div className={classes.listItem}>
+              <ListItem key={text} primary={text} href={`#${text}`}>
+                {text}
+              </ListItem>
+            </div>
+          </Link>
         ))}
       </List>
-      <Divider />
-      <List>
-        {["CONTACT", "GALLERY"].map((text, index) => (
-          <ListItem button key={text}>
-            <Link
-              style={{ textDecoration: "none" }}
-              underline="none"
-              className={classes.listItems}
-              primary={text}
-            >
-              {text}
-            </Link>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <div className={classes.phone}>
-        <Link
+      <div className={classes.phone} >
+        <a
           style={{ textDecoration: "none" }}
           className={classes.phone}
           href="tel:9158881203"
         >
           SCHEDULE FREE QUOTE: (915)888-1203
-        </Link>
+        </a>
       </div>
     </div>
   );
