@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import theme from "../assets/theme";
 import CarouselComp from "./CarouselComp";
 
+//Header padding right not zero
 const useStyles = makeStyles({
   content: {
     marginLeft: "0",
@@ -13,7 +14,7 @@ const useStyles = makeStyles({
     },
     paddingBottom: "2rem",
   },
-  items: {
+  carousel: {
     paddingRight: "0",
     [theme.breakpoints.up("md")]: {
       paddingRight: "3rem",
@@ -38,7 +39,7 @@ const Header = () => {
       alignItems="center"
       direction="row-reverse"
     >
-      <Grid item className={classes.items} md={7} xs={12}>
+      <Grid item className={classes.carousel} md={7} xs={12}>
         <CarouselComp />
       </Grid>
       <Grid item alignItems="flex-start" md={5} xs={12}>

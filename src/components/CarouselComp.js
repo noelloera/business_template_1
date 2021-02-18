@@ -28,7 +28,7 @@ const useStyles = makeStyles({
 const CarouselComp = () => {
   const classes = useStyles();
   return (
-    <Carousel>
+    <Carousel className={classes.carousel}>
       <Carousel.Item className={classes.items} interval={3500}>
         <img className={classes.image} src={img1} alt="First slide" />
       </Carousel.Item>

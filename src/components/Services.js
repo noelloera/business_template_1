@@ -1,10 +1,9 @@
 import image4 from "../assets/pic04.jpg";
 import image5 from "../assets/pic05.jpg";
-import { Typography, Grid, Button } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import theme from "../assets/theme";
-import CarouselComp from "./CarouselComp";
 import "typeface-ibm-plex-sans";
 const useStyles = makeStyles({
   content: {
@@ -51,7 +50,11 @@ const Header = () => {
         direction="row"
       >
         <Grid item className={classes.items} md={7} xs={12}>
-          <img className={classes.image} src={image4}></img>
+          <img
+            alt="mounted tv on the wall"
+            className={classes.image}
+            src={image4}
+          ></img>
         </Grid>
         <Grid item alignItems="flex-end" md={5} xs={12}>
           <Box m={3}>
@@ -79,7 +82,11 @@ const Header = () => {
         direction="row-reverse"
       >
         <Grid item className={classes.items} md={7} xs={12}>
-          <img className={classes.image} src={image5}></img>
+          <img
+            alt="installed home amplifier"
+            className={classes.image}
+            src={image5}
+          ></img>
         </Grid>
         <Grid item alignItems="flex-end" md={5} xs={12}>
           <Box m={3}>
@@ -107,7 +114,11 @@ const Header = () => {
         direction="row"
       >
         <Grid item className={classes.items} md={7} xs={12}>
-          <img className={classes.image} src={image5}></img>
+          <img
+            alt="assembled video game television console"
+            className={classes.image}
+            src="https://www.reviewgeek.com/thumbcache/0/0/8645ff2972c97bfea54692a1311c18ab/p/uploads/2019/08/dee711d2-1.jpg"
+          ></img>
         </Grid>
         <Grid item alignItems="flex-start" md={5} xs={12}>
           <Box m={3}>
@@ -118,7 +129,7 @@ const Header = () => {
               Video Game
             </Typography>
             <Typography align="right" variant="h4">
-              Center
+              Centers
             </Typography>
             <Typography align="right" variant="body2">
               Modernize your home today with a professionally installed TV or
