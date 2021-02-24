@@ -21,7 +21,7 @@ const useStyles = makeStyles(() => ({
   toolbar: {
     display: "flex",
     justifyContent: "space-between",
-    padding: "0.6rem",
+    padding: "0",
     [theme.breakpoints.up("md")]: {
       padding: "0.6rem 2rem 0.6rem 3.5rem",
     },
@@ -38,11 +38,14 @@ const useStyles = makeStyles(() => ({
     [theme.breakpoints.up("md")]: {
       height: "3rem",
     },
+    "&:hover": {
+      color: "#5298fa",
+    },
   },
   logo: {
     width: "200px",
-    [theme.breakpoints.up("md")]: {
-      width: "250px",
+    [theme.breakpoints.only("xxs")]: {
+      width: "150px",
     },
   },
   rightSide: {
@@ -55,8 +58,11 @@ const useStyles = makeStyles(() => ({
     display: "flex",
   },
   link: {
-    marginRight: "1rem",
+    marginRight: "1.3rem",
     cursor: "pointer",
+    "&:hover": {
+      color: "#5298fa",
+    },
   },
 }));
 const Navigation = (props) => {
@@ -71,7 +77,11 @@ const Navigation = (props) => {
             </IconButton>
           </Hidden>
           <a href="/">
-            <img alt="mounted tv" className={classes.logo} src={image} />
+            <img
+              alt="audio / video installation logo"
+              className={classes.logo}
+              src={image}
+            />
           </a>
         </div>
         <div className={classes.rightSide}>
@@ -80,6 +90,7 @@ const Navigation = (props) => {
               {["HOME", "SERVICES", "CONTACT", "GALLERY"].map((text) => (
                 <Link to={text} smooth>
                   <Typography
+                    key={text}
                     className={classes.link}
                     color="secondary"
                     variant="body2"
@@ -96,13 +107,16 @@ const Navigation = (props) => {
           <IconButton href="mailto:loera.noel@gmail.com?subject=Service Requested">
             <Email />
           </IconButton>
-          <Facebook />
         </div>
       </Toolbar>
-      <div className={classes.subBar}>
+      <a
+        href="tel:9158881203"
+        className={classes.subBar}
+        style={{ textDecoration: "none" }}
+      >
         <Typography variant="body2">SCHEDULE FREE QUOTE:</Typography>
         <Typography variant="body2">(915)888-1203</Typography>
-      </div>
+      </a>
     </AppBar>
   );
 };

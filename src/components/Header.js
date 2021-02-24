@@ -7,16 +7,14 @@ import CarouselComp from "./CarouselComp";
 //Header padding right not zero
 const useStyles = makeStyles({
   content: {
-    marginLeft: "0",
     [theme.breakpoints.up("md")]: {
-      marginLeft: "3rem",
       paddingBottom: "10rem",
+      paddingLeft: "2rem",
     },
-    paddingBottom: "2rem",
   },
   carousel: {
     paddingRight: "0",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       paddingRight: "3rem",
     },
   },
@@ -43,7 +41,7 @@ const Header = () => {
         <CarouselComp />
       </Grid>
       <Grid item alignItems="flex-start" md={5} xs={12}>
-        <Box m={3}>
+        <Box m={4}>
           <Typography gutterBottom align="left" variant="body1">
             Video & Audio Mounting Service
           </Typography>
@@ -54,9 +52,9 @@ const Header = () => {
             Service
           </Typography>
           <Typography align="left" variant="body2">
-            Modernize your home today with a professionally installed TV or
-            Surround Sound system. El Paso's highest rated home theater
-            installation company.
+            Modernize your home today with a professionally installed TV and/or
+            home stereo sound system. <br></br>El Paso's highest rated home
+            theater installation company.
           </Typography>
           <div className={classes.divStyling}>
             <Button

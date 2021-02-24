@@ -7,10 +7,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import theme from "../assets/theme";
 
 const useStyles = makeStyles({
+  carousel: {
+    paddingTop: "1rem",
+    width: "100%",
+  },
   items: {
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      height: "800px",
+      height: "700px",
     },
   },
   image: {

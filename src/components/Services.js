@@ -29,7 +29,6 @@ const useStyles = makeStyles({
     fontFamily: "IBM plex sans",
     color: "white",
     backgroundColor: "black",
-    marginBottom: "1.5rem",
     [theme.breakpoints.up("md")]: {
       height: "3rem",
     },
@@ -68,9 +67,7 @@ const Header = () => {
               Mounting
             </Typography>
             <Typography align="right" variant="body2">
-              Modernize your home today with a professionally installed TV or
-              Surround Sound system. El Paso's highest rated home theater
-              installation company.
+              Improve your home theater expirience with a professionally mounted TV. Enjoy the beautiful modern aesthetic.
             </Typography>
           </Box>
         </Grid>
@@ -89,7 +86,7 @@ const Header = () => {
           ></img>
         </Grid>
         <Grid item alignItems="flex-end" md={5} xs={12}>
-          <Box m={3}>
+          <Box m={4}>
             <Typography gutterBottom align="left" variant="body1">
               Expert
             </Typography>
@@ -121,7 +118,7 @@ const Header = () => {
           ></img>
         </Grid>
         <Grid item alignItems="flex-start" md={5} xs={12}>
-          <Box m={3}>
+          <Box m={4}>
             <Typography gutterBottom align="right" variant="body1">
               Themed
             </Typography>
