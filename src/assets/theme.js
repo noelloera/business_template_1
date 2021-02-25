@@ -18,6 +18,11 @@ const theme = createMuiTheme({
       xl: 1920,
     },
   },
+  overrides: {
+    MuiTextField: {
+      fontFamily: "Anton",
+    },
+  },
   typography: {
     h4: {
       fontFamily: "Anton",

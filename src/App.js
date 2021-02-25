@@ -7,12 +7,14 @@ import "bootstrap/dist/css/bootstrap.css";
 import Navigation from "./components/Navigation";
 import Header from "./components/Header";
 import Services from "./components/Services";
+import Contact from "./components/Contact";
 function App() {
   return (
     <div className="App">
       <Navigation />
       <Header />
       <Services />
+      <Contact />
     </div>
   );
 }

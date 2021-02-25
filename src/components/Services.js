@@ -7,10 +7,19 @@ import theme from "../assets/theme";
 import "typeface-ibm-plex-sans";
 const useStyles = makeStyles({
   content: {
+    backgroundColor: "#EFEFEF",
     padding: "0",
     borderBottom: "1px solid lightgray",
     [theme.breakpoints.up("md")]: {
-      padding: "10rem 2rem",
+      padding: "5rem 2rem",
+    },
+  },
+  content2: {
+    backgroundColor: "#FFFFFF",
+    padding: "0",
+    borderBottom: "1px solid lightgray",
+    [theme.breakpoints.up("md")]: {
+      padding: "5rem 2rem",
     },
   },
   image: {
@@ -23,15 +32,11 @@ const useStyles = makeStyles({
   },
   services: {
     display: "flex",
-    height: "2rem",
-    justifyContent: "space-evenly",
+    height: "3rem",
+    justifyContent: "center",
     alignItems: "center",
-    fontFamily: "IBM plex sans",
     color: "white",
     backgroundColor: "black",
-    [theme.breakpoints.up("md")]: {
-      height: "3rem",
-    },
   },
 });
 
@@ -67,14 +72,15 @@ const Header = () => {
               Mounting
             </Typography>
             <Typography align="right" variant="body2">
-              Improve your home theater expirience with a professionally mounted TV. Enjoy the beautiful modern aesthetic.
+              Improve your home theater expirience with a professionally mounted
+              TV. Enjoy the beautiful modern aesthetic.
             </Typography>
           </Box>
         </Grid>
       </Grid>
       <Grid
         container
-        className={classes.content}
+        className={classes.content2}
         alignItems="center"
         direction="row-reverse"
       >
