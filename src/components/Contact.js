@@ -31,23 +31,37 @@ const useStyles = makeStyles({
     flexDirection: "row",
   },
   labels: {
+    padding: "2rem 0",
     textAlign: "left",
   },
   form: {
+    padding: "5rem",
     width: "85%",
     display: "flex",
     flexDirection: "column",
+    boxShadow:
+      "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);",
+    [theme.breakpoints.only("xs")]: {
+      padding: 0,
+      paddingLeft: "1rem",
+    },
   },
   links: {
     display: "flex",
     width: "15%",
     flexDirection: "column",
     justifyContent: "center",
+    alignItems: "center",
   },
   fields: {
     marginTop: "2rem",
     width: "80%",
     fontSize: "10px",
+  },
+  button: {
+    marginTop: "2rem",
+    marginLeft: "1rem",
+    width: "100px",
   },
 });
 
@@ -92,74 +106,73 @@ const Contact = () => {
         <Grid item md={8} xs={12}>
           <Paper className={classes.contact} elevation={3}>
             <form className={classes.form}>
-              <Paper>
-                <FormLabel component="legend">
-                  Contact form for FREE consultation:
-                </FormLabel>
-                <TextField
-                  className={classes.fields}
-                  name="name"
-                  onChange={handleChange}
-                  label="Name:"
+              <FormLabel className={classes.labels} component="legend">
+                CONTACT NOW FOR FREE QUOTE:
+              </FormLabel>
+              <TextField
+                className={classes.fields}
+                name="name"
+                onChange={handleChange}
+                label="Name:"
+              />
+              <TextField
+                className={classes.fields}
+                name="email"
+                onChange={handleChange}
+                label="Email:"
+              />
+              <TextField
+                className={classes.fields}
+                name="phone"
+                onChange={handleChange}
+                label="Phone:"
+              />
+              <FormLabel className={classes.labels} component="legend">
+                JOB DESCRIPTION:
+              </FormLabel>
+              <FormControl component="fieldset">
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      color="primary"
+                      checked={tvInstall}
+                      onChange={handleChange}
+                      name="tvInstall"
+                    />
+                  }
+                  label="Television Installation"
                 />
-                <TextField
-                  className={classes.fields}
-                  name="email"
-                  onChange={handleChange}
-                  label="Email:"
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      color="primary"
+                      checked={audioInstall}
+                      onChange={handleChange}
+                      name="audioInstall"
+                    />
+                  }
+                  label="Home Audio Setup"
                 />
-                <TextField
-                  className={classes.fields}
-                  name="phone"
-                  onChange={handleChange}
-                  label="Phone:"
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      color="primary"
+                      checked={gameConsole}
+                      onChange={handleChange}
+                      name="gameConsole"
+                    />
+                  }
+                  label="Themed Game Console"
                 />
-                <FormLabel component="legend">
-                  Job Inquiry Description:
-                </FormLabel>
-                <FormControl component="fieldset">
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        color="primary"
-                        checked={tvInstall}
-                        onChange={handleChange}
-                        name="tvInstall"
-                      />
-                    }
-                    label="Television Installation"
-                  />
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        color="primary"
-                        checked={audioInstall}
-                        onChange={handleChange}
-                        name="audioInstall"
-                      />
-                    }
-                    label="Home Audio Setup"
-                  />
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        color="primary"
-                        checked={gameConsole}
-                        onChange={handleChange}
-                        name="gameConsole"
-                      />
-                    }
-                    label="Themed Game Console"
-                  />
-                </FormControl>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  onClick={handleSubmit}
-                >
-                  Submit
-                </Button>
-              </Paper>
+              </FormControl>
+              <Button
+                className={classes.button}
+                variant="contained"
+                color="primary"
+                onClick={handleSubmit}
+              >
+                Submit
+              </Button>
             </form>
             <div className={classes.links}>
               <h1>f</h1>
