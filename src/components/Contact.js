@@ -8,10 +8,11 @@ import {
   Paper,
 } from "@material-ui/core";
 import react from "react";
-import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import theme from "../assets/theme";
 import "typeface-ibm-plex-sans";
+import "typeface-anton";
+
 import { FormControl, FormLabel } from "@material-ui/core";
 const useStyles = makeStyles({
   section: {
@@ -31,8 +32,10 @@ const useStyles = makeStyles({
     flexDirection: "row",
   },
   labels: {
+    fontFamily: "IBM plex sans",
     padding: "2rem 0",
     textAlign: "left",
+    fontWeight: "bold",
   },
   form: {
     padding: "5rem",
@@ -54,6 +57,7 @@ const useStyles = makeStyles({
     alignItems: "center",
   },
   fields: {
+    fontFamily: "IBM plex sans",
     marginTop: "2rem",
     width: "80%",
     fontSize: "10px",
@@ -63,6 +67,15 @@ const useStyles = makeStyles({
     marginLeft: "1rem",
     width: "100px",
   },
+  //label
+
+  labelRoot: {
+    fontFamily: "IBM plex sans",
+    "&$labelFocused": {
+      fontFamily: "IBM plex sans",
+    },
+  },
+  labelFocused: {},
 });
 
 const Contact = () => {
@@ -110,22 +123,40 @@ const Contact = () => {
                 CONTACT NOW FOR FREE QUOTE:
               </FormLabel>
               <TextField
+                InputLabelProps={{
+                  classes: {
+                    root: classes.labelRoot,
+                    focused: classes.labelFocused,
+                  },
+                }}
                 className={classes.fields}
                 name="name"
                 onChange={handleChange}
-                label="Name:"
+                label="name:"
               />
               <TextField
+                InputLabelProps={{
+                  classes: {
+                    root: classes.labelRoot,
+                    focused: classes.labelFocused,
+                  },
+                }}
                 className={classes.fields}
                 name="email"
                 onChange={handleChange}
-                label="Email:"
+                label="email:"
               />
               <TextField
+                InputLabelProps={{
+                  classes: {
+                    root: classes.labelRoot,
+                    focused: classes.labelFocused,
+                  },
+                }}
                 className={classes.fields}
                 name="phone"
                 onChange={handleChange}
-                label="Phone:"
+                label="phone:"
               />
               <FormLabel className={classes.labels} component="legend">
                 JOB DESCRIPTION:

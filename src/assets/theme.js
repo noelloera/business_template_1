@@ -19,8 +19,10 @@ const theme = createMuiTheme({
     },
   },
   overrides: {
-    MuiTextField: {
-      fontFamily: "Anton",
+    MuiInputBase: {
+      input: {
+        fontFamily: "IBM plex sans",
+      },
     },
   },
   typography: {

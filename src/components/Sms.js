@@ -16,19 +16,25 @@ const useStyles = makeStyles({
       left: "65%",
     },
   },
+  icon: {
+    width: "2rem",
+    paddingLeft: "12px",
+  },
 });
 
 const Sms = (props) => {
   const classes = useStyles();
   return (
-    <Button
-      href="sms:+19158881203"
-      className={classes.button}
-      variant="contained"
-      color="primary"
-    >
-      <SmsIcon></SmsIcon>Text Us!
-    </Button>
+    <div>
+      <Button
+        href="sms:+19158881203"
+        className={classes.button}
+        variant="contained"
+        color="primary"
+      >
+        Text Us!<SmsIcon className={classes.icon}></SmsIcon>
+      </Button>
+    </div>
   );
 };
 
