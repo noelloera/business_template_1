@@ -1,1 +1,0 @@
-//Use https://codepen.io/ettrics/pen/VvxmPV for inspiration for gallery

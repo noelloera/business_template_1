@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Sms from "./components/Sms";
+import PhotoGallery from "./components/PhotoGallery";
 import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
   app: {
@@ -27,6 +28,7 @@ function App() {
       <Header />
       <Services />
       <Contact />
+      <PhotoGallery />
     </div>
   );
 }
