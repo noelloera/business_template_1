@@ -1,28 +1,69 @@
 import react from "react";
-import { Typography, Grid, Button } from "@material-ui/core";
-const Content = () => {
+import { Typography, Button } from "@material-ui/core";
+import { makeStyles } from "@material-ui/styles";
+import { Facebook, Sms, Email } from "@material-ui/icons";
+import PhoneIcon from "@material-ui/icons/Phone";
+import IconButton from "@material-ui/core/IconButton";
+const useStyles = makeStyles({
+  footer: {
+    margin: "auto",
+    height: "29rem",
+    width: "100%",
+    backgroundColor: "#2E2E2E",
+    boxShadow:
+      "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);",
+  },
+  content: {
+    paddingTop: "5rem",
+    width: "60%",
+    margin: "auto",
+    textAlign: "center",
+    color: "white",
+  },
+  links: {
+    padding: "2rem 0",
+  },
+  typography: {
+    paddingBottom: "1rem",
+  },
+});
+
+const Footer = () => {
+  const classes = useStyles();
   return (
-    <div>
-      <Grid item container>
-        <Grid item sm={2} xs={0} />
-        <Grid item md={8} xs={12}>
-          <Typography variant="h6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </Typography>
-        </Grid>
-        <Grid item sm={2} xs={0} />
-      </Grid>
-      <Button variant="contained" startIcon={<DeleteIcon />} color="primary">
-        Simple Button
-      </Button>
+    <div className={classes.footer}>
+      <div className={classes.content}>
+        <Typography className={classes.typography} variant="h6">
+          At your service!
+        </Typography>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={(e) => {
+            window.location.href = "tel://9158881203";
+          }}
+        >
+          Schedule Now
+        </Button>
+        <div className={classes.links}>
+          <IconButton href="tel:9158881203">
+            <PhoneIcon color="primary" fontSize="large" />
+          </IconButton>
+          <IconButton href="sms:+19158881203">
+            <Sms color="primary" fontSize="large" />
+          </IconButton>
+          <IconButton href="mailto:loera.noel@gmail.com?subject=Service Requested">
+            <Email color="primary" fontSize="large" />
+          </IconButton>
+          <IconButton href="https://www.facebook.com/profile.php?id=100011054640194">
+            <Facebook color="primary" fontSize="large" />
+          </IconButton>
+        </div>
+        <p>All rights reserved. </p>
+        <p>©JMAudioVideo</p>
+      </div>
     </div>
   );
 };
 
-export default Content;
+export default Footer;

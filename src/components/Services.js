@@ -1,10 +1,12 @@
-import image4 from "../assets/pic04.jpg";
-import image5 from "../assets/pic05.jpg";
+import pic04 from "../assets/pic04.jpg";
+import pic05 from "../assets/pic05.jpg";
+import pic06 from "../assets/pic06.jpg";
 import { Typography, Grid } from "@material-ui/core";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import theme from "../assets/theme";
 import "typeface-ibm-plex-sans";
+import Fade from "react-reveal/Fade";
 const useStyles = makeStyles({
   content: {
     backgroundColor: "#EFEFEF",
@@ -23,6 +25,8 @@ const useStyles = makeStyles({
     },
   },
   image: {
+    boxShadow:
+      "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
     width: "100%",
     [theme.breakpoints.up("md")]: {
       position: "relative",
@@ -57,24 +61,26 @@ const Header = () => {
           <img
             alt="mounted tv on the wall"
             className={classes.image}
-            src={image4}
+            src={pic04}
           ></img>
         </Grid>
         <Grid item alignItems="flex-end" md={5} xs={12}>
           <Box m={3}>
-            <Typography gutterBottom align="right" variant="body1">
-              Professional
-            </Typography>
-            <Typography color="primary" align="right" variant="h4">
-              Television
-            </Typography>
-            <Typography align="right" variant="h4">
-              Mounting
-            </Typography>
-            <Typography align="right" variant="body2">
-              Improve your home theater expirience with a professionally mounted
-              TV. Enjoy the beautiful modern aesthetic.
-            </Typography>
+            <Fade right>
+              <Typography gutterBottom align="right" variant="body1">
+                Professional
+              </Typography>
+              <Typography color="primary" align="right" variant="h4">
+                Television
+              </Typography>
+              <Typography align="right" variant="h4">
+                Mounting
+              </Typography>
+              <Typography align="right" variant="body2">
+                Improve your home theater expirience with a professionally
+                mounted TV. Enjoy the beautiful modern aesthetic.
+              </Typography>
+            </Fade>
           </Box>
         </Grid>
       </Grid>
@@ -88,25 +94,27 @@ const Header = () => {
           <img
             alt="installed home amplifier"
             className={classes.image}
-            src={image5}
+            src={pic05}
           ></img>
         </Grid>
         <Grid item alignItems="flex-end" md={5} xs={12}>
           <Box m={4}>
-            <Typography gutterBottom align="left" variant="body1">
-              Expert
-            </Typography>
-            <Typography color="primary" align="left" variant="h4">
-              Home Audio
-            </Typography>
-            <Typography align="left" variant="h4">
-              Setup
-            </Typography>
-            <Typography align="left" variant="body2">
-              Modernize your home today with a professionally installed TV or
-              Surround Sound system. El Paso's highest rated home theater
-              installation company.
-            </Typography>
+            <Fade left>
+              <Typography gutterBottom align="left" variant="body1">
+                Expert
+              </Typography>
+              <Typography color="primary" align="left" variant="h4">
+                Home Audio
+              </Typography>
+              <Typography align="left" variant="h4">
+                Setup
+              </Typography>
+              <Typography align="left" variant="body2">
+                Modernize your home today with a professionally installed TV or
+                Surround Sound system. El Paso's highest rated home theater
+                installation company.
+              </Typography>
+            </Fade>
           </Box>
         </Grid>
       </Grid>
@@ -120,25 +128,27 @@ const Header = () => {
           <img
             alt="assembled video game television console"
             className={classes.image}
-            src="https://www.reviewgeek.com/thumbcache/0/0/8645ff2972c97bfea54692a1311c18ab/p/uploads/2019/08/dee711d2-1.jpg"
+            src={pic06}
           ></img>
         </Grid>
         <Grid item alignItems="flex-start" md={5} xs={12}>
           <Box m={4}>
-            <Typography gutterBottom align="right" variant="body1">
-              Themed
-            </Typography>
-            <Typography color="primary" align="right" variant="h4">
-              Video Game
-            </Typography>
-            <Typography align="right" variant="h4">
-              Centers
-            </Typography>
-            <Typography align="right" variant="body2">
-              Modernize your home today with a professionally installed TV or
-              Surround Sound system. El Paso's highest rated home theater
-              installation company.
-            </Typography>
+            <Fade right>
+              <Typography gutterBottom align="right" variant="body1">
+                Themed
+              </Typography>
+              <Typography color="primary" align="right" variant="h4">
+                Video Game
+              </Typography>
+              <Typography align="right" variant="h4">
+                Centers
+              </Typography>
+              <Typography align="right" variant="body2">
+                Modernize your home today with a professionally installed TV or
+                Surround Sound system. El Paso's highest rated home theater
+                installation company.
+              </Typography>
+            </Fade>
           </Box>
         </Grid>
       </Grid>

@@ -10,9 +10,13 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Sms from "./components/Sms";
 import PhotoGallery from "./components/PhotoGallery";
+import Footer from "./components/Footer";
 import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
   app: {
+    backgroundColor: "#EFEFEF",
+  },
+  content: {
     maxWidth: "1300px",
     margin: "auto",
     boxShadow:
@@ -23,12 +27,15 @@ function App() {
   const classes = useStyles();
   return (
     <div className={classes.app}>
-      <Navigation />
-      <Sms />
-      <Header />
-      <Services />
-      <Contact />
-      <PhotoGallery />
+      <div className={classes.content}>
+        <Navigation />
+        <Sms />
+        <Header />
+        <Services />
+        <Contact />
+        <PhotoGallery />
+        <Footer />
+      </div>
     </div>
   );
 }

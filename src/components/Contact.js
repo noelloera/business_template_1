@@ -122,7 +122,7 @@ const Contact = () => {
           <Paper className={classes.contact} elevation={3}>
             <form className={classes.form}>
               <FormLabel className={classes.labels} component="legend">
-                CONTACT NOW FOR FREE QUOTE:
+                CONTACT FOR A FREE QUOTE:
               </FormLabel>
               <TextField
                 InputLabelProps={{
@@ -215,16 +215,16 @@ const Contact = () => {
             </form>
             <div className={classes.links}>
               <IconButton href="tel:9158881203">
-                <PhoneIcon />
+                <PhoneIcon fontSize="large" />
               </IconButton>
               <IconButton href="sms:+19158881203">
-                <Sms />
+                <Sms fontSize="large" />
               </IconButton>
               <IconButton href="mailto:loera.noel@gmail.com?subject=Service Requested">
-                <Email />
+                <Email fontSize="large" />
               </IconButton>
               <IconButton href="https://www.facebook.com/profile.php?id=100011054640194">
-                <Facebook />
+                <Facebook fontSize="large" />
               </IconButton>
             </div>
           </Paper>
