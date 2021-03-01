@@ -13,7 +13,10 @@ const useStyles = makeStyles({
       left: "80%",
     },
     [theme.breakpoints.down("sm")]: {
-      left: "65%",
+      left: "75%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      left: "60%",
     },
   },
   icon: {

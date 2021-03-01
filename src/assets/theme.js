@@ -16,6 +16,8 @@ const theme = createMuiTheme({
       md: 960,
       lg: 1280,
       xl: 1920,
+      desktop: 1080,
+      mobile: 760,
     },
   },
   overrides: {
@@ -32,6 +34,11 @@ const theme = createMuiTheme({
       [defaultTheme.breakpoints.up("md")]: {
         fontSize: "5rem",
       },
+    },
+    h5: {
+      fontFamily: "IBM plex sans",
+      color: "black",
+      fontSize: "1.5rem",
     },
     h6: {
       fontFamily: "IBM plex sans",

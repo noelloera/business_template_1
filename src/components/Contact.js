@@ -12,8 +12,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import theme from "../assets/theme";
 import "typeface-ibm-plex-sans";
 import "typeface-anton";
+import PhoneIcon from "@material-ui/icons/Phone";
+import IconButton from "@material-ui/core/IconButton";
 
 import { FormControl, FormLabel } from "@material-ui/core";
+import { Facebook, Sms, Email } from "@material-ui/icons";
 const useStyles = makeStyles({
   section: {
     backgroundColor: "#EFEFEF",
@@ -27,13 +30,15 @@ const useStyles = makeStyles({
     backgroundColor: "black",
   },
   contact: {
-    marginTop: "4rem",
+    margin: "2rem, 0",
+    marginBottom: "2rem",
     display: "flex",
     flexDirection: "row",
   },
   labels: {
     fontFamily: "IBM plex sans",
-    padding: "2rem 0",
+    paddingTop: "2rem",
+    paddingBottom: "2rem",
     textAlign: "left",
     fontWeight: "bold",
   },
@@ -45,8 +50,7 @@ const useStyles = makeStyles({
     boxShadow:
       "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);",
     [theme.breakpoints.only("xs")]: {
-      padding: 0,
-      paddingLeft: "1rem",
+      padding: "1rem",
     },
   },
   links: {
@@ -58,17 +62,15 @@ const useStyles = makeStyles({
   },
   fields: {
     fontFamily: "IBM plex sans",
-    marginTop: "2rem",
+    marginTop: "1.5rem",
     width: "80%",
-    fontSize: "10px",
+    fontSize: "12px",
   },
   button: {
     marginTop: "2rem",
     marginLeft: "1rem",
     width: "100px",
   },
-  //label
-
   labelRoot: {
     fontFamily: "IBM plex sans",
     "&$labelFocused": {
@@ -163,15 +165,19 @@ const Contact = () => {
               </FormLabel>
               <FormControl component="fieldset">
                 <FormControlLabel
+                  className={classes.labelRoot}
                   control={
                     <Checkbox
+                      className={classes.labelRoot}
                       color="primary"
                       checked={tvInstall}
                       onChange={handleChange}
                       name="tvInstall"
                     />
                   }
-                  label="Television Installation"
+                  label={
+                    <Typography variant="h5">Television Mounting</Typography>
+                  }
                 />
                 <FormControlLabel
                   control={
@@ -182,7 +188,7 @@ const Contact = () => {
                       name="audioInstall"
                     />
                   }
-                  label="Home Audio Setup"
+                  label={<Typography variant="h5">Home Audio Setup</Typography>}
                 />
                 <FormControlLabel
                   control={
@@ -193,7 +199,9 @@ const Contact = () => {
                       name="gameConsole"
                     />
                   }
-                  label="Themed Game Console"
+                  label={
+                    <Typography variant="h5">Television Mounting</Typography>
+                  }
                 />
               </FormControl>
               <Button
@@ -206,10 +214,18 @@ const Contact = () => {
               </Button>
             </form>
             <div className={classes.links}>
-              <h1>f</h1>
-              <h1>f</h1>
-              <h1>f</h1>
-              <h1>f</h1>
+              <IconButton href="tel:9158881203">
+                <PhoneIcon />
+              </IconButton>
+              <IconButton href="sms:+19158881203">
+                <Sms />
+              </IconButton>
+              <IconButton href="mailto:loera.noel@gmail.com?subject=Service Requested">
+                <Email />
+              </IconButton>
+              <IconButton href="https://www.facebook.com/profile.php?id=100011054640194">
+                <Facebook />
+              </IconButton>
             </div>
           </Paper>
         </Grid>
