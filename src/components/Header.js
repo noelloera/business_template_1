@@ -1,33 +1,8 @@
 import { Typography, Grid, Button } from "@material-ui/core";
 import Box from "@material-ui/core/Box";
-import { makeStyles } from "@material-ui/core/styles";
-import theme from "../assets/theme";
 import CarouselComp from "./CarouselComp";
 import Fade from "react-reveal/Fade";
-//Header padding right not zero
-const useStyles = makeStyles({
-  content: {
-    backgroundColor: "white",
-    [theme.breakpoints.up("md")]: {
-      paddingBottom: "10rem",
-      paddingLeft: "2rem",
-    },
-  },
-  carousel: {
-    paddingRight: "0",
-    [theme.breakpoints.up("lg")]: {
-      paddingRight: "3rem",
-    },
-  },
-  divStyling: {
-    marginTop: "0.5rem",
-    display: "flex",
-    paddingBottom: "4rem",
-  },
-  buttonStyling: {
-    justifyContent: "flex-start",
-  },
-});
+import useStyles from "./useStyles";
 
 const Header = () => {
   const classes = useStyles();
@@ -38,7 +13,7 @@ const Header = () => {
       alignItems="center"
       direction="row-reverse"
     >
-      <Grid item className={classes.carousel} md={7} xs={12}>
+      <Grid item className={classes.carouselComp} md={7} xs={12}>
         <Fade>
           <CarouselComp />
         </Fade>

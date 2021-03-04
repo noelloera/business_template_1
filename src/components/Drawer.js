@@ -1,47 +1,11 @@
 import React from "react";
-import makeStyles from "@material-ui/core/styles/makeStyles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import MenuIcon from "@material-ui/icons/Menu";
 import logo from "../assets/jmaudiovideo.png";
-import "typeface-anton";
-import "typeface-ibm-plex-sans";
 import { Link } from "react-scroll";
-const useStyles = makeStyles({
-  drawer: {
-    width: "250px",
-  },
-  list: {
-    display: "flex",
-    flexDirection: "column",
-  },
-  logoDiv: {
-    display: "flex",
-    justifyContent: "center",
-    borderBottom: "1px solid gray",
-  },
-  logo: {
-    height: "3rem",
-    width: "11rem",
-    margin: "0.5rem",
-  },
-  links: {
-    display: "flex",
-    justifyContent: "center",
-    borderBottom: "1px solid lightgray",
-    cursor: "pointer",
-  },
-  listItem: {
-    color: "black",
-    fontSize: "1.1rem",
-  },
-  phone: {
-    marginTop: "2rem",
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-});
+import useStyles from "./useStyles";
 
 export default function Drawer() {
   const classes = useStyles();
@@ -68,8 +32,8 @@ export default function Drawer() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <div className={classes.logoDiv}>
-        <img alt="mounted tv" className={classes.logo} src={logo} />
+      <div className={classes.drawerLogoDiv}>
+        <img alt="mounted tv" className={classes.drawerLogo} src={logo} />
       </div>
       <List className={classes.list}>
         {["HOME", "SERVICES", "CONTACT", "GALLERY"].map((text) => (
@@ -77,7 +41,7 @@ export default function Drawer() {
             to={text}
             style={{ textDecoration: "none" }}
             smooth
-            className={classes.links}
+            className={classes.drawerLinks}
             onClick={(e) => {
               handleClose();
             }}
@@ -90,10 +54,9 @@ export default function Drawer() {
           </Link>
         ))}
       </List>
-      <div className={classes.phone}>
+      <div className={classes.phoneLink}>
         <a
           style={{ textDecoration: "none" }}
-          className={classes.phone}
           href="tel:9158881203"
         >
           SCHEDULE FREE QUOTE: (915)888-1203
@@ -101,7 +64,6 @@ export default function Drawer() {
       </div>
     </div>
   );
-
   return (
     <div>
       {["left"].map((anchor) => (

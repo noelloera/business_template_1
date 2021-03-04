@@ -3,46 +3,8 @@ import pic05 from "../assets/pic05.jpg";
 import pic06 from "../assets/pic06.jpg";
 import { Typography, Grid } from "@material-ui/core";
 import Box from "@material-ui/core/Box";
-import { makeStyles } from "@material-ui/core/styles";
-import theme from "../assets/theme";
-import "typeface-ibm-plex-sans";
 import Fade from "react-reveal/Fade";
-const useStyles = makeStyles({
-  content: {
-    backgroundColor: "#EFEFEF",
-    padding: "0",
-    borderBottom: "1px solid lightgray",
-    [theme.breakpoints.up("md")]: {
-      padding: "5rem 2rem",
-    },
-  },
-  content2: {
-    backgroundColor: "#FFFFFF",
-    padding: "0",
-    borderBottom: "1px solid lightgray",
-    [theme.breakpoints.up("md")]: {
-      padding: "5rem 2rem",
-    },
-  },
-  image: {
-    boxShadow:
-      "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-    width: "100%",
-    [theme.breakpoints.up("md")]: {
-      position: "relative",
-      width: "100%",
-      height: "100%",
-    },
-  },
-  services: {
-    display: "flex",
-    height: "3rem",
-    justifyContent: "center",
-    alignItems: "center",
-    color: "white",
-    backgroundColor: "black",
-  },
-});
+import useStyles from "./useStyles";
 
 const Header = () => {
   const classes = useStyles();
@@ -53,14 +15,14 @@ const Header = () => {
       </Typography>
       <Grid
         container
-        className={classes.content}
+        className={classes.section}
         alignItems="center"
         direction="row"
       >
         <Grid item className={classes.items} md={7} xs={12}>
           <img
             alt="mounted tv on the wall"
-            className={classes.image}
+            className={classes.images}
             src={pic04}
           ></img>
         </Grid>
@@ -86,14 +48,14 @@ const Header = () => {
       </Grid>
       <Grid
         container
-        className={classes.content2}
+        className={classes.section2}
         alignItems="center"
         direction="row-reverse"
       >
         <Grid item className={classes.items} md={7} xs={12}>
           <img
             alt="installed home amplifier"
-            className={classes.image}
+            className={classes.images}
             src={pic05}
           ></img>
         </Grid>
@@ -120,14 +82,14 @@ const Header = () => {
       </Grid>
       <Grid
         container
-        className={classes.content}
+        className={classes.section}
         alignItems="center"
         direction="row"
       >
         <Grid item className={classes.items} md={7} xs={12}>
           <img
             alt="assembled video game television console"
-            className={classes.image}
+            className={classes.images}
             src={pic06}
           ></img>
         </Grid>

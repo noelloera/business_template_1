@@ -8,78 +8,13 @@ import {
   Paper,
 } from "@material-ui/core";
 import react from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import theme from "../assets/theme";
 import "typeface-ibm-plex-sans";
 import "typeface-anton";
 import PhoneIcon from "@material-ui/icons/Phone";
 import IconButton from "@material-ui/core/IconButton";
-
 import { FormControl, FormLabel } from "@material-ui/core";
 import { Facebook, Sms, Email } from "@material-ui/icons";
-const useStyles = makeStyles({
-  section: {
-    backgroundColor: "#EFEFEF",
-  },
-  divider: {
-    display: "flex",
-    height: "3rem",
-    justifyContent: "center",
-    alignItems: "center",
-    color: "white",
-    backgroundColor: "black",
-  },
-  contact: {
-    margin: "2rem, 0",
-    marginBottom: "2rem",
-    display: "flex",
-    flexDirection: "row",
-  },
-  labels: {
-    fontFamily: "IBM plex sans",
-    paddingTop: "2rem",
-    paddingBottom: "2rem",
-    textAlign: "left",
-    fontWeight: "bold",
-  },
-  form: {
-    padding: "5rem",
-    width: "85%",
-    display: "flex",
-    flexDirection: "column",
-    boxShadow:
-      "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);",
-    [theme.breakpoints.only("xs")]: {
-      padding: "1rem",
-    },
-  },
-  links: {
-    display: "flex",
-    width: "15%",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  fields: {
-    fontFamily: "IBM plex sans",
-    marginTop: "1.5rem",
-    width: "80%",
-    fontSize: "12px",
-  },
-  button: {
-    marginTop: "2rem",
-    marginLeft: "1rem",
-    width: "100px",
-  },
-  labelRoot: {
-    fontFamily: "IBM plex sans",
-    "&$labelFocused": {
-      fontFamily: "IBM plex sans",
-    },
-  },
-  labelFocused: {},
-});
-
+import useStyles from "./useStyles";
 const Contact = () => {
   const classes = useStyles();
   const [state, setState] = react.useState({
@@ -112,14 +47,14 @@ const Contact = () => {
   const { tvInstall, audioInstall, gameConsole } = state;
 
   return (
-    <div className={classes.section}>
+    <div className={classes.contact}>
       <Typography className={classes.divider} variant="body2" id="CONTACT">
         CONTACT
       </Typography>
       <Grid container>
         <Grid item md={2}></Grid>
         <Grid item md={8} xs={12}>
-          <Paper className={classes.contact} elevation={3}>
+          <Paper className={classes.contactForm} elevation={3}>
             <form className={classes.form}>
               <FormLabel className={classes.labels} component="legend">
                 CONTACT FOR A FREE QUOTE:
@@ -213,7 +148,7 @@ const Contact = () => {
                 Submit
               </Button>
             </form>
-            <div className={classes.links}>
+            <div className={classes.icons}>
               <IconButton href="tel:9158881203">
                 <PhoneIcon fontSize="large" />
               </IconButton>

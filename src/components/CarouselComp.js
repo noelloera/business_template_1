@@ -2,32 +2,7 @@ import { Carousel } from "react-bootstrap";
 import img1 from "../assets/pic01.jpg";
 import img2 from "../assets/pic02.jpg";
 import img3 from "../assets/pic03.jpg";
-//Theme manipulation
-import { makeStyles } from "@material-ui/core/styles";
-import theme from "../assets/theme";
-
-const useStyles = makeStyles({
-  carousel: {
-    paddingTop: "1rem",
-    width: "100%",
-  },
-  items: {
-    width: "100%",
-    [theme.breakpoints.up("md")]: {
-      height: "700px",
-    },
-  },
-  image: {
-    width: "100%",
-    [theme.breakpoints.up("md")]: {
-      position: "relative",
-      margin: "0 auto",
-      maxWidth: "850px",
-      width: "100%",
-      height: "100%",
-    },
-  },
-});
+import useStyles from "./useStyles";
 
 const CarouselComp = () => {
   const classes = useStyles();

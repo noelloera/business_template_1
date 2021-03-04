@@ -13,33 +13,7 @@ import pic08 from "../assets/photogallery/pic08.jpg";
 import pic09 from "../assets/photogallery/pic09.jpg";
 
 import { Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
-import theme from "../assets/theme";
-
-const useStyles = makeStyles({
-  gallery: { width: "100%" },
-  galleryComp: {
-    backgroundColor: "white",
-
-    padding: "5rem 2rem",
-    margin: "2rem auto",
-    width: "80%",
-    boxShadow:
-      "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);",
-    [theme.breakpoints.down("sm")]: {
-      width: "100%",
-      padding: "3rem 1rem",
-    },
-  },
-  divider: {
-    display: "flex",
-    height: "3rem",
-    justifyContent: "center",
-    alignItems: "center",
-    color: "white",
-    backgroundColor: "black",
-  },
-});
+import useStyles from "./useStyles";
 
 //Setup classes to make the components based on the makeStyles
 const PhotoGallery = () => {

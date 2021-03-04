@@ -3,35 +3,13 @@ import { makeStyles } from "@material-ui/styles";
 import { Facebook, Sms, Email } from "@material-ui/icons";
 import PhoneIcon from "@material-ui/icons/Phone";
 import IconButton from "@material-ui/core/IconButton";
-const useStyles = makeStyles({
-  footer: {
-    margin: "auto",
-    height: "29rem",
-    width: "100%",
-    backgroundColor: "#2E2E2E",
-    boxShadow:
-      "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);",
-  },
-  content: {
-    paddingTop: "5rem",
-    width: "60%",
-    margin: "auto",
-    textAlign: "center",
-    color: "white",
-  },
-  links: {
-    padding: "2rem 0",
-  },
-  typography: {
-    paddingBottom: "1rem",
-  },
-});
+import useStyles from "./useStyles";
 
 const Footer = () => {
   const classes = useStyles();
   return (
     <div className={classes.footer}>
-      <div className={classes.content}>
+      <div className={classes.footerContent}>
         <Typography className={classes.typography} variant="h6">
           At your service!
         </Typography>
@@ -44,7 +22,7 @@ const Footer = () => {
         >
           Schedule Now
         </Button>
-        <div className={classes.links}>
+        <div className={classes.footerIcons}>
           <IconButton href="tel:9158881203">
             <PhoneIcon color="primary" fontSize="large" />
           </IconButton>
