@@ -1,4 +1,3 @@
-import react from "react";
 import { Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { Facebook, Sms, Email } from "@material-ui/icons";

@@ -1,15 +1,12 @@
-import AppBar from "@material-ui/core/AppBar";
+import AppBar from "@material-ui/core/AppBar"; //MaterialUI
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
-import { makeStyles } from "@material-ui/styles";
-import image from "../assets/jmaudiovideo.png";
-import theme from "../assets/theme";
-//MaterialUI Icons
+import makeStyles from "@material-ui/styles/makeStyles";
+import logo from "../assets/jmaudiovideo.png";
 import Facebook from "@material-ui/icons/Facebook";
-import Email from "@material-ui/icons/Email";
-//Fonts
-import "typeface-anton";
+import "typeface-anton"; //Fonts
 import "typeface-ibm-plex-sans";
+import theme from "../assets/theme.js";
 import SwipeableTemporaryDrawer from "./Drawer";
 import { Typography, Hidden } from "@material-ui/core";
 import { Link } from "react-scroll";
@@ -84,7 +81,7 @@ const Navigation = (props) => {
               <img
                 alt="audio / video installation logo"
                 className={classes.logo}
-                src={image}
+                src={logo}
               />
             </a>
           </div>

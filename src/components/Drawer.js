@@ -1,11 +1,10 @@
 import React from "react";
-
-import { makeStyles } from "@material-ui/core/styles";
+import makeStyles from "@material-ui/core/styles/makeStyles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import MenuIcon from "@material-ui/icons/Menu";
-import image from "../assets/jmaudiovideo.png";
+import logo from "../assets/jmaudiovideo.png";
 import "typeface-anton";
 import "typeface-ibm-plex-sans";
 import { Link } from "react-scroll";
@@ -44,7 +43,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SwipeableTemporaryDrawer() {
+export default function Drawer() {
   const classes = useStyles();
   const [state, setState] = React.useState({
     left: false,
@@ -70,7 +69,7 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <div className={classes.logoDiv}>
-        <img alt="mounted tv" className={classes.logo} src={image} />
+        <img alt="mounted tv" className={classes.logo} src={logo} />
       </div>
       <List className={classes.list}>
         {["HOME", "SERVICES", "CONTACT", "GALLERY"].map((text) => (
@@ -91,7 +90,7 @@ export default function SwipeableTemporaryDrawer() {
           </Link>
         ))}
       </List>
-      <div className={classes.phone} >
+      <div className={classes.phone}>
         <a
           style={{ textDecoration: "none" }}
           className={classes.phone}
