@@ -1,6 +1,7 @@
 import makeStyles from "@material-ui/styles/makeStyles";
 import theme from "../assets/theme.js";
-
+import "typeface-ibm-plex-sans";
+import "typeface-anton";
 const useStyles = makeStyles(() => ({
   //App
   app: {
@@ -101,7 +102,6 @@ const useStyles = makeStyles(() => ({
   },
   rightSide: {
     overflow: "hidden",
-
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
@@ -111,7 +111,7 @@ const useStyles = makeStyles(() => ({
     display: "flex",
   },
   link: {
-    marginRight: "1.9rem",
+    marginRight: "2rem",
     cursor: "pointer",
     "&:hover": {
       color: "#5298fa",
@@ -198,9 +198,6 @@ const useStyles = makeStyles(() => ({
     backgroundColor: "black",
   },
   //Contact
-  contact: {
-    backgroundColor: "#EFEFEF",
-  },
   divider: {
     display: "flex",
     height: "3rem",
@@ -209,55 +206,6 @@ const useStyles = makeStyles(() => ({
     color: "white",
     backgroundColor: "black",
   },
-  contactForm: {
-    margin: "2rem, 0",
-    marginBottom: "2rem",
-    display: "flex",
-    flexDirection: "row",
-  },
-  labels: {
-    fontFamily: "IBM plex sans",
-    paddingTop: "2rem",
-    paddingBottom: "2rem",
-    textAlign: "left",
-    fontWeight: "bold",
-  },
-  form: {
-    padding: "5rem",
-    width: "85%",
-    display: "flex",
-    flexDirection: "column",
-    boxShadow:
-      "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);",
-    [theme.breakpoints.only("xs")]: {
-      padding: "1rem",
-    },
-  },
-  icons: {
-    display: "flex",
-    width: "15%",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  fields: {
-    fontFamily: "IBM plex sans",
-    marginTop: "1.5rem",
-    width: "80%",
-    fontSize: "12px",
-  },
-  button: {
-    marginTop: "2rem",
-    marginLeft: "1rem",
-    width: "100px",
-  },
-  labelRoot: {
-    fontFamily: "IBM plex sans",
-    "&$labelFocused": {
-      fontFamily: "IBM plex sans",
-    },
-  },
-  labelFocused: {},
   //PhotoGallery
   gallery: { width: "100%" },
   galleryComp: {

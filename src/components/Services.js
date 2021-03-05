@@ -40,7 +40,7 @@ const Header = () => {
               </Typography>
               <Typography align="right" variant="body2">
                 Improve your home theater expirience with a professionally
-                mounted TV. Enjoy the beautiful modern aesthetic.
+                mounted TV and concealed cables for that modern aesthetic.
               </Typography>
             </Fade>
           </Box>
@@ -72,9 +72,7 @@ const Header = () => {
                 Setup
               </Typography>
               <Typography align="left" variant="body2">
-                Modernize your home today with a professionally installed TV or
-                Surround Sound system. El Paso's highest rated home theater
-                installation company.
+                Take your home audio to the next level with sound that not only sounds great, but also looks modern and sleek.
               </Typography>
             </Fade>
           </Box>
@@ -106,9 +104,7 @@ const Header = () => {
                 Centers
               </Typography>
               <Typography align="right" variant="body2">
-                Modernize your home today with a professionally installed TV or
-                Surround Sound system. El Paso's highest rated home theater
-                installation company.
+                Custom made video game themed TV consoles will make any video-game lovers dream come true!
               </Typography>
             </Fade>
           </Box>

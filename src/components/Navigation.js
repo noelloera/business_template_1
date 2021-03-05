@@ -3,8 +3,6 @@ import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import logo from "../assets/jmaudiovideo.png";
 import Facebook from "@material-ui/icons/Facebook";
-import "typeface-anton"; //Fonts
-import "typeface-ibm-plex-sans";
 import SwipeableTemporaryDrawer from "./Drawer";
 import { Typography, Hidden } from "@material-ui/core";
 import { Link } from "react-scroll";
@@ -15,7 +13,7 @@ const Navigation = (props) => {
   const classes = useStyles();
   return (
     <Fade>
-      <AppBar className={classes.navStyle} position="static">
+      <AppBar className={classes.navStyle} position="static" id="HOME">
         <Toolbar className={classes.toolbar}>
           <div>
             <Hidden mdUp>
@@ -35,13 +33,8 @@ const Navigation = (props) => {
             <Hidden smDown>
               <div className={classes.links}>
                 {["HOME", "SERVICES", "CONTACT", "GALLERY"].map((text) => (
-                  <Link to={text} smooth>
-                    <Typography
-                      key={text}
-                      className={classes.link}
-                      color="secondary"
-                      variant="body2"
-                    >
+                  <Link className={classes.link} to={text} smooth>
+                    <Typography key={text} color="secondary" variant="body2">
                       {text}
                     </Typography>
                   </Link>
