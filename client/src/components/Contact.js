@@ -102,7 +102,7 @@ const Contact = () => {
 
   const handleSubmit = (event) => {
     console.log(state);
-    //POST request will make a call to the server 
+    //POST request will make a call to the server
   };
   const { tvInstall, audioInstall, gameConsole } = state;
 
