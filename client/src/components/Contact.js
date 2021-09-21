@@ -209,16 +209,16 @@ const Contact = () => {
               </Button>
             </form>
             <div className={classes.icons}>
-              <IconButton href="tel:9158881203">
+              <IconButton href="tel:phonenumber">
                 <PhoneIcon fontSize="large" />
               </IconButton>
-              <IconButton href="sms:+19158881203">
+              <IconButton href="sms:+phonenumber">
                 <Sms fontSize="large" />
               </IconButton>
-              <IconButton href="mailto:loera.noel@gmail.com?subject=Service Requested">
+              <IconButton href="mailto:email?subject=Service Requested">
                 <Email fontSize="large" />
               </IconButton>
-              <IconButton href="https://www.facebook.com/profile.php?id=100011054640194">
+              <IconButton href="FacebookURL">
                 <Facebook fontSize="large" />
               </IconButton>
             </div>

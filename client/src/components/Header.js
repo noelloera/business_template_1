@@ -41,7 +41,7 @@ const Header = () => {
                 variant="contained"
                 color="primary"
                 onClick={(e) => {
-                  window.location.href = "tel://9158881203";
+                  window.location.href = "tel://PhoneNumber";
                 }}
               >
                 Schedule Now

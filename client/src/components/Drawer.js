@@ -55,11 +55,8 @@ export default function Drawer() {
         ))}
       </List>
       <div className={classes.phoneLink}>
-        <a
-          style={{ textDecoration: "none" }}
-          href="tel:9158881203"
-        >
-          SCHEDULE FREE QUOTE: (915)888-1203
+        <a style={{ textDecoration: "none" }} href="tel:phonenumber">
+          SCHEDULE FREE QUOTE: #PHONE NUMBER
         </a>
       </div>
     </div>

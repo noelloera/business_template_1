@@ -41,18 +41,18 @@ const Navigation = (props) => {
                 ))}
               </div>
             </Hidden>
-            <IconButton href="https://www.facebook.com/profile.php?id=100011054640194">
+            <IconButton href="FacebookURL">
               <Facebook color="primary" fontSize="large" />
             </IconButton>
           </div>
         </Toolbar>
         <a
-          href="tel:9158881203"
+          href="tel:PhoneNumber"
           className={classes.subBar}
           style={{ textDecoration: "none" }}
         >
           <Typography variant="body2">SCHEDULE FREE QUOTE:</Typography>
-          <Typography variant="body2">(915)888-1203</Typography>
+          <Typography variant="body2">#PHONE NUMBER</Typography>
         </a>
       </AppBar>
     </Fade>

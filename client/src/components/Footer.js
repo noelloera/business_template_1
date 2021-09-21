@@ -16,22 +16,22 @@ const Footer = () => {
           variant="contained"
           color="primary"
           onClick={(e) => {
-            window.location.href = "tel://9158881203";
+            window.location.href = "tel://phonenumber";
           }}
         >
           Schedule Now
         </Button>
         <div className={classes.footerIcons}>
-          <IconButton href="tel:9158881203">
+          <IconButton href="tel:PhoneNumber">
             <PhoneIcon color="primary" fontSize="large" />
           </IconButton>
-          <IconButton href="sms:+19158881203">
+          <IconButton href="sms:+PhoneNumber">
             <Sms color="primary" fontSize="large" />
           </IconButton>
-          <IconButton href="mailto:loera.noel@gmail.com?subject=Service Requested">
+          <IconButton href="mailto:email?subject=Service Requested">
             <Email color="primary" fontSize="large" />
           </IconButton>
-          <IconButton href="https://www.facebook.com/profile.php?id=100011054640194">
+          <IconButton href="FacebookURL">
             <Facebook color="primary" fontSize="large" />
           </IconButton>
         </div>
